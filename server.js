@@ -10,6 +10,12 @@ app.use(express.urlencoded({ extended: false }));
 
 // Connect Database
 connectDB();
+app.use(express.static('build'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
+
 
 // Enable CORS
 app.use((req, res, next) => {
