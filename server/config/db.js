@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-const URI = `mongodb+srv://grkii:grkii@priyanshucluster.fqaupta.mongodb.net/banking?retryWrites=true&w=majority`;
+const dbusername = process.env.DB_USERNAME;
+const dbpassword = process.env.DB_PASSWORD;
+const URI = `mongodb+srv://${dbusername}:${dbpassword}@priyanshucluster.fqaupta.mongodb.net/banking?retryWrites=true&w=majority`;
 
 const connectDB = async () => {
   try {
