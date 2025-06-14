@@ -48,6 +48,4 @@ A full-stack banking application built with React, Node.js, and Express that all
 
 Feel free to submit issues and enhancement requests.
 
-## License
 
-This project is licensed under the MIT License.
